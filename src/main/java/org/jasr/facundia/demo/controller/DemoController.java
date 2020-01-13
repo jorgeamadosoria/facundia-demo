@@ -12,6 +12,11 @@ public class DemoController {
 
 	Facundia facundia  = new Facundia();
 	
+	@RequestMapping(path = "version")
+	public @ResponseBody String cardinal() {
+		return facundia.getVersion();
+	}
+	
 	@RequestMapping(path = "cardinal")
 	public @ResponseBody String cardinal(String number) {
 		return facundia.cardinal(number);
