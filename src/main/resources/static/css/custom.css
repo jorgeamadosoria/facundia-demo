@@ -1,0 +1,41 @@
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Avoid the IE 10-11 `min-height` bug. */
+}
+
+.link {
+	width:80%;
+}
+
+.logo {
+	width: 40px;
+	height: 40px;
+}
+
+.logos {
+	list-style-type:none;
+	display: inline;	
+}
+
+.logos li {
+	float: left;
+	margin: 10px;
+}
+
+.menu {
+	min-width:140px;
+}
+
+.container {
+  flex: 1 0 auto; 
+  padding: 20px;
+}
+
+.footer {
+  flex-shrink: 0; 
+  padding: 20px;
+}

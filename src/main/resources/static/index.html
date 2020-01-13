@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Facundia demo</title>
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.css">
+<link rel="stylesheet" href="css/all.min.css">
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+	<header class="navbar">
+		<section class="navbar-section">
+			<a class="navbar-brand ml-2 mt-4 mr-2"><h3>Facundia demo</h3></a>
+		</section>
+		<section class="navbar-section">
+			<div class="dropdown">
+				<a href="#" class="btn btn-link dropdown-toggle"><i class="fab  fa-2x fa-github"></i></a>
+				<ul class="menu">
+					<li class="menu-item"><a href="https://github.com/jorgeamadosoria/dfa">DFA
+							<div class="menu-badge">
+								<i class="fas fa-external-link-square-alt"></i>
+							</div>
+					</a></li>
+					<li class="menu-item"><a href="https://github.com/jorgeamadosoria/facundia">Facundia
+							<div class="menu-badge">
+								<i class="fas fa-external-link-square-alt"></i>
+							</div>
+					</a></li>
+					<li class="menu-item"><a href="https://github.com/jorgeamadosoria/facundia-demo">Este Demo
+							<div class="menu-badge">
+								<i class="fas fa-external-link-square-alt"></i>
+							</div>
+					</a></li>
+				</ul>
+			</div>
+			<div class="dropdown">
+				<a href="#" class="btn btn-link dropdown-toggle"><i class="fas  fa-2x fa-link"></i></a>
+				<ul class="menu">
+					<li class="menu-item"><a href="https://portfolio-jasr.herokuapp.com/">Portfolio
+							<div class="menu-badge">
+								<i class="fas fa-external-link-square-alt"></i>
+							</div>
+					</a></li>
+					<li class="menu-item"><a href="https://live-cv-jasr.herokuapp.com/">CV
+							<div class="menu-badge">
+								<i class="fas fa-external-link-square-alt"></i>
+							</div>
+					</a></li>
+					<li class="menu-item"><a href="verbos.txt">Verbos<sub>(6MB+)</sub>
+							<div class="menu-badge">
+								<i class="fas fa-external-link-square-alt"></i>
+							</div>
+					</a></li>
+				</ul>
+			</div>
+			<a id="help-btn" href="#" class="btn btn-link"><i class="fas fa-2x fa-question-circle"></i></a> <a id="info-btn" href="#" class="btn btn-link"><i class="fas fa-2x fa-info-circle"></i></a>
+			</div>
+		</section>
+	</header>
+	<div class="container">
+		<div class="columns">
+			<div class="column col-12">
+				<div class="divider"></div>
+			</div>
+			<div class="column col-4"></div>
+			<div class="column col-4">
+				<div class="input-group">
+					<input id="input_cardinal" type="number" class="form-input" placeholder="número entero">
+					<button id="input_cardinal_btn" class="btn btn-primary input-group-btn">Escribir&nbsp;&nbsp;&nbsp;</button>
+				</div>
+			</div>
+			<div class="column col-4">
+				<button id="cardinal_reset_btn" class="btn">Limpiar&nbsp;&nbsp;</button>
+			</div>
+			<div class="column col-12">
+				<div class="divider text-center" data-content="Result"></div>
+				<div id="cardinal" class="h2 text-center"></div>
+				<div class="divider"></div>
+			</div>
+		</div>
+		<div class="columns">
+			<div class="column col-4"></div>
+			<div class="column col-4">
+				<div class="input-group">
+					<input id="input_singular" type="text" class="form-input" placeholder="palabra en singular">
+					<button id="input_singular_btn" class="btn btn-primary input-group-btn">Pluralizar</button>
+				</div>
+			</div>
+			<div class="column col-4">
+				<button id="singular_reset_btn" class="btn">Limpiar&nbsp;&nbsp;</button>
+			</div>
+			<div class="column col-12">
+				<div class="divider text-center" data-content="Result"></div>
+				<div id="plural" class="h2 text-center"></div>
+				<div class="divider"></div>
+			</div>
+		</div>
+		<div class="columns">
+			<div class="column col-4"></div>
+			<div class="column col-4">
+				<div class="form-group">
+					<div class="input-group">
+						<input id="input_syllabicate" type="text" class="form-input" placeholder="palabra a dividir en sílabas">
+						<button id="input_syllabicate_btn" class="btn btn-primary">Silabear&nbsp;&nbsp;</button>
+					</div>
+				</div>
+			</div>
+			<div class="column col-4">
+				<button id="syllabicate_reset_btn" class="btn">Limpiar&nbsp;&nbsp;</button>
+			</div>
+			<div class="column col-12">
+				<div class="divider text-center" data-content="Result"></div>
+				<div id="syllabicate" class="h2 text-center"></div>
+				<div class="divider"></div>
+			</div>
+		</div>
+		<div class="columns">
+			<div class="column col-4"></div>
+			<div class="column col-4">
+				<div class="input-group">
+					<input id="input_conjugate" type="text" class="form-input" placeholder="verbo en infinitivo">
+					<button id="input_conjugate_btn" class="btn btn-primary input-group-btn">Conjugar</button>
+				</div>
+			</div>
+			<div class="column col-4">
+				<button id="conjugate_reset_btn" class="btn">Limpiar&nbsp;&nbsp;</button>
+			</div>
+			<div class="column col-4"></div>
+			<divi class="column col-12 ">
+			<div id="modelo" class="column col-md-6 col-sm-12 col-xl-4 col-3 d-hide">
+				<div class="panel mb-1 ">
+					<div class="panel-header">
+						<div class="panel-title">
+							<span class="label label-rounded label-primary"></span>
+						</div>
+					</div>
+					<div class="panel-body text-left">
+						<table class="table">
+							<tbody>
+								<tr>
+									<td><b>Yo</b></td>
+									<td id="yo"></td>
+								</tr>
+								<tr>
+									<td><b>Tú/Vos</b></td>
+									<td><span id="tu"></span><span id="vos" class="d-hide"></span></td>
+									</td>
+								</tr>
+								<tr>
+									<td><b>Ud/él/ella</b></td>
+									<td id="el"></td>
+								</tr>
+								<tr>
+									<td><b>Nosotros/as</b></td>
+									<td id="nosotros"></span>
+								</tr>
+								<tr>
+									<td><b>Vosotros/as</b></td>
+									<td id="vosotros"></span>
+								</tr>
+								<tr>
+									<td><b>Uds/Ellos/as</b></td>
+									<td id="ellos"></span>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div id="modelo-imp" class="column col-md-6 col-sm-12 col-xl-4 col-3 d-hide">
+				<div class="panel mb-1 ">
+					<div class="panel-header">
+						<div class="panel-title">
+							<span class="label label-rounded label-primary"></span>
+						</div>
+					</div>
+					<div class="panel-body">
+						<table class="table">
+							<tbody>
+								<tr>
+									<td><b>Tú/Vos</b></td>
+									<td><span id="tu"></span></td>
+									</td>
+								</tr>
+								<tr>
+									<td><b>Ud</b></td>
+									<td id="el"></td>
+								</tr>
+								<tr>
+									<td><b>Vosotros/as</b></td>
+									<td id="vosotros"></span>
+								</tr>
+								<tr>
+									<td><b>Ellos/as</b></td>
+									<td id="ellos"></span>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="divider text-center" data-content="Result"></div>
+			<div id="impersonal" class="columns text-center d-hide">
+				<div class="column col-4">
+					<div class="panel mb-1">
+						<div class="panel-header">
+							<div class="panel-title">
+								<span class="label label-rounded label-primary">Infinitivo</span>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div id="infinitivo" class="text-center"></div>
+						</div>
+					</div>
+				</div>
+				<div class="column col-4">
+					<div class="panel mb-1">
+						<div class="panel-header">
+							<div class="panel-title text-center">
+								<span class="label label-rounded label-primary">Gerundio</span>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div id="gerundio" class="text-center"></div>
+						</div>
+					</div>
+				</div>
+				<div class="column col-4">
+					<div class="panel mb-1">
+						<div class="panel-header">
+							<div class="panel-title text-center">
+								<span class="label label-rounded label-primary">Participio</span>
+							</div>
+						</div>
+						<div class="panel-body">
+							<div id="participio" class="text-center"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="conjugation" class="conjugation columns text-center"></div>
+			<div class="divider"></div>
+		</div>
+	</div>
+	<br />
+	<footer class="footer">
+		<section class="text-center">Solo para propósitos de demostración. Sin copyright, 2020</section>
+	</footer>
+	<div class="modal modal-lg" id="modal-help">
+		<a href="#" class="modal-overlay" aria-label="Close"></a>
+		<div class="modal-container">
+			<div class="modal-header">
+				<a href="#" class="btn btn-clear modal-close float-right" aria-label="Close"></a>
+				<div class="modal-title h3">Facundia Demo</div>
+			</div>
+			<div class="modal-body">
+				<div class="content">
+					<p>Esta página es un demo para Facundia, una librería para manipulación de palabras en español.</p>
+					<p>Facundia es un simple jar que puede ser incluida en cualquier aplicación Java que use un gestor de dependencias.</p>
+					<h5>Funcionalidades</h5>
+					<ul>
+						<li><b>Escritura de números cardinales</b>: Permite que se escriban números cardinales en su forma textual. Los números escritos siguen el formato de escala larga hasta los cuatrillones, la mayor cantidad reconocida por la Real Academia como una palabra dedicada a nombrar una cantidad numérica.</li>
+						<li><b>Sílabas</b>: Permite la separacion de palabras en sílabas según un enfoque tónico. Por ejemplo, etimológicamente la palabra desahucio se dividiría en des-ahu-cio, mientras que tónicamente la división silábica es de-sahu-cio.</li>
+						<li><b>Pluralización</b>: Permite obtener el plural de cualquier palabra en español siguiendo un conjunto de reglas estructurales y una lista de plurales excepcionales. La librería es estructural y no semántica.</li>
+						<li><b>Conjugación verbal en español</b>: Permite obtener todas las conjugaciones de un verbo. Las expresiones regulares usadas no incluyen análisis semántico de las palabras. Probado con 9000+ verbos existentes en español extraídos del sitio oficial del DRAE. Algunos verbos (como follar, asolar o desolar, engrosar y otros) tienen dos formas, en cuyo caso se genera solo una de los dos en todos los casos. Los verbos defectivos se generan como si todas las formas personas existieran.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-lg" id="modal-info">
+		<a href="#" class="modal-overlay" aria-label="Close"></a>
+		<div class="modal-container">
+			<div class="modal-header">
+				<a href="#" class="btn btn-clear modal-close float-right" aria-label="Close"></a>
+				<div class="modal-title h3">Acerca de Facundia</div>
+			</div>
+			<div class="modal-body">
+				<div class="content">
+					<p>Esta página es un demo para Facundia, una librería para manipulación de palabras en español.</p>
+					<p>Facundia es un simple jar que puede ser incluida en cualquier aplicación Java que use un gestor de dependencias. Incluye otra librería para separar las palabras en sílabas, mediante un Autómata Finito Determinista (DFA en inglés).</p>
+					<p>Adicionalmente, esta página fue construida con las siguientes tecnologías y servicios:</p>
+					<div class="clearfix"><ul class="logos">
+						<li><img title="Spring Initializr" class="logo" src="https://spring.io/img/homepage/icon-spring-boot.svg"></li>
+						<li><img title="Spring Web" class="logo" src="https://spring.io/img/homepage/icon-spring-framework.svg"></li>
+						<li><img title="Spectre" class="logo" src="https://pbs.twimg.com/profile_images/916505702247555072/snfAGDyh.jpg"></li>
+						<li><img title="jQuery" class="logo" src="https://www.logolynx.com/images/logolynx/2a/2ab4daf7454eef5b0f564a00ed616a7d.png"></li>
+						<li><img title="Github" class="logo" src="https://cdn1.iconfinder.com/data/icons/social-media-vol-1-1/24/_github-512.png"></li>
+						<li><img title="Jitpack.io" class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDQUf-rLz7eyymsR0d312ay-xYMTY4Cq1gAG1RWa4_X27snbj8&s"></li>
+						<li><img title="Heroku" class="logo" src="https://image.flaticon.com/icons/png/512/873/873120.png"></li>
+					</ul>
+					</div>
+					<div class="clearfix">
+					<p>Facundia no tiene objetivos comerciales, es solo un ejercicio de programación y disciplina personal, para demostrar que podía hacerlo.</p>
+					<p>La lista de 9185 (6MB+) verbos en español utilizada para corregir las reglas de conjugación puede accederse <a href="verbos.txt">aquí</a></p>
+					<p>Otras aplicaciones que he hecho pueden encontrarse <a href="https://portfolio-jasr.herokuapp.com/">aquí</a></p>
+					<p>Mi curriculum vitae está <a href="https://live-cv-jasr.herokuapp.com/">aquí</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script>
+  	function cardinal(number){  
+  		$.get("cardinal?number=" + number, (data) => {$(".cardinal").removeClass("d-hide");$("#cardinal").text(data);});
+  	};
+  	function singular(singular){  
+	  	$.get("plural?word=" + singular, (data) => $("#plural").text(data));
+	};
+	function syllabicate(word){  
+	 	$.get("syllabicate?word=" + word, (data) => $("#syllabicate").html(("" + data).replace(/,/g,"&nbsp;&bull;&nbsp;")));
+	};
+	
+	function displayTensePanel(title,idx,vos,doble,data){
+		var panel = $("#modelo").clone().removeClass("d-hide");
+		panel.find(".panel-title span").text(title);
+		panel.find(".panel-body #yo").text(doble?(data[idx++] + "/" + data[idx++]):data[idx++]);
+		panel.find(".panel-body #tu").text(doble?(data[idx++] + "/" + data[idx++]):data[idx++]);
+		if (vos)
+			panel.find("#vos").removeClass("d-hide").text("/" + (doble?(data[idx++] + "/" + data[idx++]):data[idx++]));
+		panel.find(".panel-body #el").text(doble?(data[idx++] + "/" + data[idx++]):data[idx++]);
+		panel.find(".panel-body #nosotros").text(doble?(data[idx++] + "/" + data[idx++]):data[idx++]);
+		panel.find(".panel-body #vosotros").text(doble?(data[idx++] + "/" + data[idx++]):data[idx++]);
+		panel.find(".panel-body #ellos").text(doble?(data[idx++] + "/" + data[idx++]):data[idx++]);
+		$("#conjugation").append(panel);
+		return idx;
+	};
+	function displayTensePanelImperativo(title,idx,data){
+		var panel = $("#modelo-imp").clone().removeClass("d-hide");
+		panel.find(".panel-title span").text(title);
+		panel.find(".panel-body #tu").text(data[idx++]);
+		panel.find(".panel-body #el").text(data[idx++]);
+		panel.find(".panel-body #vosotros").text(data[idx++]);
+		panel.find(".panel-body #ellos").text(data[idx++]);
+		$("#conjugation").append(panel);
+		return idx;
+	};
+	function conjugate(infinitive){  
+	  	$.get("conjugate?infinitive=" + infinitive, (data) => {
+	  		var idx = 0;
+	  		$("#infinitivo").text(data[idx++]);
+	  		$("#gerundio").text(data[idx++]);
+	  		$("#participio").text(data[idx++]);
+	  		$("#impersonal").removeClass("d-hide");
+	  		$("#conjugation").html("");
+	  		idx = displayTensePanel("Indicativo Presente",idx,true,false,data);
+	  		idx = displayTensePanel("Indicativo Copretérito",idx,false,false,data);
+	  		idx = displayTensePanel("Indicativo Futuro",idx,false,false,data);
+	  		idx = displayTensePanel("Indicativo Pretérito",idx,false,false,data);
+	  		idx = displayTensePanel("Indicativo Pospretérito",idx,false,false,data);
+	  		idx = displayTensePanel("Subjuntivo Futuro",idx,false,false,data);
+	  		idx = displayTensePanel("Subjuntivo Presente",idx,false,false,data);
+	  		idx = displayTensePanel("Subjuntivo Pretérito",idx,false,true,data);
+	  		idx = displayTensePanelImperativo("Imperativo",idx,data);
+	  	});
+	  	
+	};
+		$("#input_cardinal_btn").click(()=> cardinal($("#input_cardinal").val()));
+		$("#cardinal_reset_btn").click(()=> {$("#cardinal").html(""); $("#input_cardinal").val("");});
+		$("#input_singular_btn").click(()=> singular($("#input_singular").val()));
+		$("#singular_reset_btn").click(()=> {$("#plural").html(""); $("#input_singular").val("");});
+		$("#input_syllabicate_btn").click(()=> syllabicate($("#input_syllabicate").val()));
+		$("#syllabicate_reset_btn").click(()=> {$("#syllabicate").html(""); $("#input_syllabicate").val("");});
+		$("#input_conjugate_btn").click(()=> conjugate($("#input_conjugate").val()));
+		$("#conjugate_reset_btn").click(()=> {
+	  		$("#impersonal").addClass("d-hide");
+			$("#conjugation").html(""); 
+			$("#input_conjugate").val("");
+		});
+		
+		$("#help-btn").click(()=> $("#modal-help").addClass("active"));
+		$("#info-btn").click(()=> $("#modal-info").addClass("active"));
+		/*$("#help-btn .modal-close").click(()=> $("#modal-help").removeClass("active"));
+		$("#info-btn .modal-close").click(()=> $("#modal-info").removeClass("active"));*/
+		
+
+		$(document).delegate('.modal-close', 'click', function(e) {
+		    $(this).closest('.modal').removeClass('active');
+		    e.preventDefault();
+		});
+  </script>
+</body>
+</html>
