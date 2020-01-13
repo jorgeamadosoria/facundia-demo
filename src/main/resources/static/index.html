@@ -180,8 +180,13 @@
 						<table class="table">
 							<tbody>
 								<tr>
-									<td><b>Tú/Vos</b></td>
+									<td><b>Tú</b></td>
 									<td><span id="tu"></span></td>
+									</td>
+								</tr>
+								<tr>
+									<td><b>Vos</b></td>
+									<td><span id="vos"></span></td>
 									</td>
 								</tr>
 								<tr>
@@ -193,7 +198,7 @@
 									<td id="vosotros"></span>
 								</tr>
 								<tr>
-									<td><b>Ellos/as</b></td>
+									<td><b>Uds</b></td>
 									<td id="ellos"></span>
 								</tr>
 							</tbody>
@@ -332,6 +337,7 @@
 		var panel = $("#modelo-imp").clone().removeClass("d-hide");
 		panel.find(".panel-title span").text(title);
 		panel.find(".panel-body #tu").text(data[idx++]);
+		panel.find(".panel-body #vos").text(data[idx++]);
 		panel.find(".panel-body #el").text(data[idx++]);
 		panel.find(".panel-body #vosotros").text(data[idx++]);
 		panel.find(".panel-body #ellos").text(data[idx++]);
