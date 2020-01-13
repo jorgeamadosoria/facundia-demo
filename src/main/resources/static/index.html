@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Facundia demo</title>
 <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
 <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
@@ -67,7 +67,7 @@
 			<div class="column col-4"></div>
 			<div class="column col-4">
 				<div class="input-group">
-					<input id="input_cardinal" type="number" class="form-input" placeholder="número entero">
+					<input id="input_cardinal" type="number" class="form-input" placeholder="nÃºmero entero">
 					<button id="input_cardinal_btn" class="btn btn-primary input-group-btn">Escribir&nbsp;&nbsp;&nbsp;</button>
 				</div>
 			</div>
@@ -102,7 +102,7 @@
 			<div class="column col-4">
 				<div class="form-group">
 					<div class="input-group">
-						<input id="input_syllabicate" type="text" class="form-input" placeholder="palabra a dividir en sílabas">
+						<input id="input_syllabicate" type="text" class="form-input" placeholder="palabra a dividir en sÃ­labas">
 						<button id="input_syllabicate_btn" class="btn btn-primary">Silabear&nbsp;&nbsp;</button>
 					</div>
 				</div>
@@ -144,12 +144,12 @@
 									<td id="yo"></td>
 								</tr>
 								<tr>
-									<td><b>Tú/Vos</b></td>
+									<td><b>TÃº/Vos</b></td>
 									<td><span id="tu"></span><span id="vos" class="d-hide"></span></td>
 									</td>
 								</tr>
 								<tr>
-									<td><b>Ud/él/ella</b></td>
+									<td><b>Ud/Ã©l/ella</b></td>
 									<td id="el"></td>
 								</tr>
 								<tr>
@@ -180,7 +180,7 @@
 						<table class="table">
 							<tbody>
 								<tr>
-									<td><b>Tú/Vos</b></td>
+									<td><b>TÃº/Vos</b></td>
 									<td><span id="tu"></span></td>
 									</td>
 								</tr>
@@ -246,7 +246,7 @@
 	</div>
 	<br />
 	<footer class="footer">
-		<section class="text-center">Solo para propósitos de demostración. Sin copyright, 2020</section>
+		<section class="text-center">Solo para propÃ³sitos de demostraciÃ³n. Sin copyright, 2020</section>
 	</footer>
 	<div class="modal modal-lg" id="modal-help">
 		<a href="#" class="modal-overlay" aria-label="Close"></a>
@@ -257,14 +257,14 @@
 			</div>
 			<div class="modal-body">
 				<div class="content">
-					<p>Esta página es un demo para Facundia, una librería para manipulación de palabras en español.</p>
-					<p>Facundia es un simple jar que puede ser incluida en cualquier aplicación Java que use un gestor de dependencias.</p>
+					<p>Esta pÃ¡gina es un demo para Facundia, una librerÃ­a para manipulaciÃ³n de palabras en espaÃ±ol.</p>
+					<p>Facundia es un simple jar que puede ser incluida en cualquier aplicaciÃ³n Java que use un gestor de dependencias.</p>
 					<h5>Funcionalidades</h5>
 					<ul>
-						<li><b>Escritura de números cardinales</b>: Permite que se escriban números cardinales en su forma textual. Los números escritos siguen el formato de escala larga hasta los cuatrillones, la mayor cantidad reconocida por la Real Academia como una palabra dedicada a nombrar una cantidad numérica.</li>
-						<li><b>Sílabas</b>: Permite la separacion de palabras en sílabas según un enfoque tónico. Por ejemplo, etimológicamente la palabra desahucio se dividiría en des-ahu-cio, mientras que tónicamente la división silábica es de-sahu-cio.</li>
-						<li><b>Pluralización</b>: Permite obtener el plural de cualquier palabra en español siguiendo un conjunto de reglas estructurales y una lista de plurales excepcionales. La librería es estructural y no semántica.</li>
-						<li><b>Conjugación verbal en español</b>: Permite obtener todas las conjugaciones de un verbo. Las expresiones regulares usadas no incluyen análisis semántico de las palabras. Probado con 9000+ verbos existentes en español extraídos del sitio oficial del DRAE. Algunos verbos (como follar, asolar o desolar, engrosar y otros) tienen dos formas, en cuyo caso se genera solo una de los dos en todos los casos. Los verbos defectivos se generan como si todas las formas personas existieran.</li>
+						<li><b>Escritura de nÃºmeros cardinales</b>: Permite que se escriban nÃºmeros cardinales en su forma textual. Los nÃºmeros escritos siguen el formato de escala larga hasta los cuatrillones, la mayor cantidad reconocida por la Real Academia como una palabra dedicada a nombrar una cantidad numÃ©rica.</li>
+						<li><b>SÃ­labas</b>: Permite la separacion de palabras en sÃ­labas segÃºn un enfoque tÃ³nico. Por ejemplo, etimolÃ³gicamente la palabra desahucio se dividirÃ­a en des-ahu-cio, mientras que tÃ³nicamente la divisiÃ³n silÃ¡bica es de-sahu-cio.</li>
+						<li><b>PluralizaciÃ³n</b>: Permite obtener el plural de cualquier palabra en espaÃ±ol siguiendo un conjunto de reglas estructurales y una lista de plurales excepcionales. La librerÃ­a es estructural y no semÃ¡ntica.</li>
+						<li><b>ConjugaciÃ³n verbal en espaÃ±ol</b>: Permite obtener todas las conjugaciones de un verbo. Las expresiones regulares usadas no incluyen anÃ¡lisis semÃ¡ntico de las palabras. Probado con 9000+ verbos existentes en espaÃ±ol extraÃ­dos del sitio oficial del DRAE. Algunos verbos (como follar, asolar o desolar, engrosar y otros) tienen dos formas, en cuyo caso se genera solo una de los dos en todos los casos. Los verbos defectivos se generan como si todas las formas personas existieran.</li>
 					</ul>
 				</div>
 			</div>
@@ -279,9 +279,9 @@
 			</div>
 			<div class="modal-body">
 				<div class="content">
-					<p>Esta página es un demo para Facundia, una librería para manipulación de palabras en español.</p>
-					<p>Facundia es un simple jar que puede ser incluida en cualquier aplicación Java que use un gestor de dependencias. Incluye otra librería para separar las palabras en sílabas, mediante un Autómata Finito Determinista (DFA en inglés).</p>
-					<p>Adicionalmente, esta página fue construida con las siguientes tecnologías y servicios:</p>
+					<p>Esta pÃ¡gina es un demo para Facundia, una librerÃ­a para manipulaciÃ³n de palabras en espaÃ±ol.</p>
+					<p>Facundia es un simple jar que puede ser incluida en cualquier aplicaciÃ³n Java que use un gestor de dependencias. Incluye otra librerÃ­a para separar las palabras en sÃ­labas, mediante un AutÃ³mata Finito Determinista (DFA en inglÃ©s).</p>
+					<p>Adicionalmente, esta pÃ¡gina fue construida con las siguientes tecnologÃ­as y servicios:</p>
 					<div class="clearfix"><ul class="logos">
 						<li><img title="Spring Initializr" class="logo" src="https://spring.io/img/homepage/icon-spring-boot.svg"></li>
 						<li><img title="Spring Web" class="logo" src="https://spring.io/img/homepage/icon-spring-framework.svg"></li>
@@ -293,10 +293,10 @@
 					</ul>
 					</div>
 					<div class="clearfix">
-					<p>Facundia no tiene objetivos comerciales, es solo un ejercicio de programación y disciplina personal, para demostrar que podía hacerlo.</p>
-					<p>La lista de 9185 (6MB+) verbos en español utilizada para corregir las reglas de conjugación puede accederse <a href="verbos.txt">aquí</a></p>
-					<p>Otras aplicaciones que he hecho pueden encontrarse <a href="https://portfolio-jasr.herokuapp.com/">aquí</a></p>
-					<p>Mi curriculum vitae está <a href="https://live-cv-jasr.herokuapp.com/">aquí</a></p>
+					<p>Facundia no tiene objetivos comerciales, es solo un ejercicio de programaciÃ³n y disciplina personal, para demostrar que podÃ­a hacerlo.</p>
+					<p>La lista de 9185 (6MB+) verbos en espaÃ±ol utilizada para corregir las reglas de conjugaciÃ³n puede accederse <a href="verbos.txt">aquÃ­</a></p>
+					<p>Otras aplicaciones que he hecho pueden encontrarse <a href="https://portfolio-jasr.herokuapp.com/">aquÃ­</a></p>
+					<p>Mi curriculum vitae estÃ¡ <a href="https://live-cv-jasr.herokuapp.com/">aquÃ­</a></p>
 					</div>
 				</div>
 			</div>
@@ -347,13 +347,13 @@
 	  		$("#impersonal").removeClass("d-hide");
 	  		$("#conjugation").html("");
 	  		idx = displayTensePanel("Indicativo Presente",idx,true,false,data);
-	  		idx = displayTensePanel("Indicativo Copretérito",idx,false,false,data);
+	  		idx = displayTensePanel("Indicativo CopretÃ©rito",idx,false,false,data);
 	  		idx = displayTensePanel("Indicativo Futuro",idx,false,false,data);
-	  		idx = displayTensePanel("Indicativo Pretérito",idx,false,false,data);
-	  		idx = displayTensePanel("Indicativo Pospretérito",idx,false,false,data);
+	  		idx = displayTensePanel("Indicativo PretÃ©rito",idx,false,false,data);
+	  		idx = displayTensePanel("Indicativo PospretÃ©rito",idx,false,false,data);
 	  		idx = displayTensePanel("Subjuntivo Futuro",idx,false,false,data);
 	  		idx = displayTensePanel("Subjuntivo Presente",idx,false,false,data);
-	  		idx = displayTensePanel("Subjuntivo Pretérito",idx,false,true,data);
+	  		idx = displayTensePanel("Subjuntivo PretÃ©rito",idx,false,true,data);
 	  		idx = displayTensePanelImperativo("Imperativo",idx,data);
 	  	});
 	  	
