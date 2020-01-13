@@ -24,7 +24,9 @@ public class DemoController {
 	
 	@RequestMapping(path = "syllabicate")
 	public @ResponseBody List<String> syllabicate(String word) {
-		return facundia.syllabicate(word);
+		List<String> syllabes = facundia.syllabicate(word);
+		System.out.println(syllabes);
+		return syllabes;
 	}
 	
 	@RequestMapping(path = "conjugate")
