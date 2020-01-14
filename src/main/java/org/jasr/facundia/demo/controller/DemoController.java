@@ -30,7 +30,6 @@ public class DemoController {
 	@RequestMapping(path = "syllabicate")
 	public @ResponseBody List<String> syllabicate(String word) {
 		List<String> syllabes = facundia.syllabicate(word);
-		System.out.println(facundia.getVersion());
 		System.out.println(syllabes);
 		return syllabes;
 	}

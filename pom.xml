@@ -65,13 +65,8 @@
 		</dependency>
 		<dependency>
 			<groupId>com.github.jorgeamadosoria</groupId>
-			<artifactId>dfa</artifactId>
-			<version>1.0.1</version>
-		</dependency>
-		<dependency>
-			<groupId>com.github.jorgeamadosoria</groupId>
 			<artifactId>facundia</artifactId>
-			<version>3.0.2</version>
+			<version>3.0.3</version>
 		</dependency>
 	</dependencies>
 	<build>
